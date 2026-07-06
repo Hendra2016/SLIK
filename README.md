@@ -6,18 +6,22 @@ An enterprise-grade, multi-module microservices architecture built on **Spring B
 
 ## 🏗️ System Architecture & Workflow
 
-When a client interacts with the application, traffic flows sequentially through the edge layer down to the business engine, while relying on shared utility contracts:
-                                 [ Bank-view ] (Presentation Layer)
-                                          │
-                                          ▼ (HTTP / AJAX)
-                                 [ gateway ] (Dynamic Edge Router)
-                                          │
-                                          ▼
-                                 [ identifier ] (Auth & Token Validation)
-                                          │
-                                          ▼ (Authenticated Request Context)
-                                 [ bank-core ] (Backend Core System Engine)
+## 🏗️ System Architecture & Workflow
 
+When a client interacts with the application, traffic flows sequentially through the edge layer down to the business engine, while relying on shared utility contracts:
+
+```text
+                  [ Bank-view ] (Presentation Layer)
+                        │
+                        ▼ (HTTP / AJAX)
+                   [ gateway ] (Dynamic Edge Router)
+                        │
+                        ▼
+                  [ identifier ] (Auth & Token Validation)
+                        │
+                        ▼ (Authenticated Request Context)
+                   [ bank-core ] (Backend Core System Engine)
+```
 ### Shared Global Dependencies
 * 📦 **`bank-dto`** ── Used by ➔ `Bank-view` & `bank-core` (Shared Serialization Contracts)
 * 📦 **`Bank-common`** ── Used by ➔ `Bank-view` & `bank-core` (Shared System Utilities)
