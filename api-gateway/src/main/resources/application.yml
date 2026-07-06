@@ -65,10 +65,11 @@ management:
 
 gateway:
   auth:
-    # URL of identity-service for token validation
     identity-service-url: ${IDENTITY_SERVICE_URL:http://localhost:8086}
-    # Comma-separated path prefixes that skip token validation
-    whitelist: ${GATEWAY_AUTH_WHITELIST:/bank-core/login,/actuator,/fallback}
+    whitelist:
+        - /bank-core/login
+        - /actuator
+        - /fallback
 
 resilience4j:
   circuitbreaker:
