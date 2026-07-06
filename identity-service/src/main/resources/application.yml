@@ -13,7 +13,6 @@ legacy:
 
 auth:
   validate:
-    # Real token validation endpoint in bank-core (checks BankLogin table)
     probe-path: ${AUTH_VALIDATE_PROBE_PATH:auth/validate}
 
 client:
