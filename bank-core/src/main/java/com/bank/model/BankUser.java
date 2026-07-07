@@ -6,9 +6,7 @@
 package com.bank.model;
 
 import java.io.Serializable;
-
-import javax.persistence.*;
-
+import jakarta.persistence.*;
 /**
  *
  * @author Hendra Dotjang

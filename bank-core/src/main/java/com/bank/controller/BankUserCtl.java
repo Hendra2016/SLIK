@@ -16,26 +16,11 @@ import com.bank.dto.RestResponse;
 import com.bank.services.BankUserSvc;
 
 @RestController
-@RequestMapping("/bankUser")
+@RequestMapping("/bankuser")
 public class BankUserCtl {
 
 	@Autowired
 	private BankUserSvc bankUserSvc;
-
-	@RequestMapping(value = "/all", method = RequestMethod.GET)
-	public RestResponse loginUser() {
-		RestResponse restRestponse = new RestResponse();
-		try {
-			restRestponse.setContents(bankUserSvc.getUsers());
-			restRestponse.setStatus(1);
-			restRestponse.setMessage("Berhasil");
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			restRestponse.setStatus(0);
-			restRestponse.setMessage("Gagal " + e);
-		}
-		return restRestponse;
-	}
 
 	@RequestMapping(value = "all/{pageSequence}/{size}", method = RequestMethod.GET)
 	public RestResponse getBankUserPaging(@PathVariable("pageSequence") int pageSequence,

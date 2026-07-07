@@ -29,4 +29,14 @@ management:
     health:
       probes:
         enabled: true
+bank-core:
+  url: http://localhost:8082
 
+jwt:
+  secret: N7jz2QmG9mP8L8v2m3eP4Jj6sVYb3x7aK9o1L5P2Q4U=
+  expiration: 3600000
+
+logging:
+  level:
+    org.springframework.security: TRACE
+    org.springframework.web: TRACE

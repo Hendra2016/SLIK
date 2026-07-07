@@ -12,11 +12,11 @@ import com.bank.model.BankUser;
 
 public interface BankUserDao extends JpaRepository<BankUser, Integer> {
 
-	@Query(value = "select a  " + "from BankUser a " + "where (UPPER(a.userId) LIKE UPPER(:search) "
+	@Query(value = "select a  " + "from BankUser a " + "where (UPPER(a.email) LIKE UPPER(:search) "
 			+ "or UPPER(a.username) LIKE UPPER(:search)  ) ")
-	public Page<BankUser> getAllBankUserPaging(@Param("search") String search, Pageable page);
+	Page<BankUser> getAllBankUserPaging(@Param("search") String search, Pageable page);
 
 	@Query("select u from BankUser u where u.username=:username and u.password=:password")
-	public List<BankUser> getUserLogin(@Param("username") String username, @Param("password") String password);
+	List<BankUser> getUserLogin(@Param("username") String username, @Param("password") String password);
 
 }

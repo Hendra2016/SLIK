@@ -39,8 +39,8 @@ spring:
               args:
                 name: gatewayCb
                 fallbackUri: forward:/fallback/unavailable
-        - id: bank-core
-          uri: ${LEGACY_BANK_CORE_URL:http://localhost:8082}
+        - id: identity-service
+          uri: ${LEGACY_BANK_CORE_URL:http://localhost:8086}
           predicates:
             - Path=/bank-core/**,/legacy/bank-core/**
           filters:
@@ -68,6 +68,7 @@ gateway:
     identity-service-url: ${IDENTITY_SERVICE_URL:http://localhost:8086}
     whitelist:
         - /bank-core/login
+        - /bank-core/auth/login
         - /actuator
         - /fallback
 

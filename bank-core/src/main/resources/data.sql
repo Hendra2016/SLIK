@@ -23,10 +23,10 @@ INSERT INTO bank_menu (menu_id, menu_name, menu_url, menu_type, parent_id)
 VALUES (3, 'Role Management', '/roles', 'MENU', 1);
 
 INSERT INTO bank_menu (menu_id, menu_name, menu_url, menu_type, parent_id)
-VALUES (21, 'Bank Users List', '/bankUser', 'SUBMENU', 2);
+VALUES (21, 'Bank Users List', '/bankuser', 'SUBMENU', 2);
 
 INSERT INTO bank_menu (menu_id, menu_name, menu_url, menu_type, parent_id)
-VALUES (22, 'Add New User', '/bankUser/add', 'SUBMENU', 2);
+VALUES (22, 'Add New User', '/bankuser/add', 'SUBMENU', 2);
 
 
 -- 3. Insert Submenus under 'System Settings' (parent_id = 3)

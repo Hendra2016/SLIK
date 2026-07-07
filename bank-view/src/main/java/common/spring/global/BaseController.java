@@ -152,7 +152,7 @@ public class BaseController {
 		final HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		try {
-			headers.set("web-creden", getLoginData().getToken());
+			headers.set("Authorization", "Bearer "+getLoginData().getToken());
 		}catch(Exception e){
 			System.out.println("catch "+e.getMessage());
 		}

@@ -6,12 +6,8 @@
 package com.bank.model;
 
 import java.io.Serializable;
+import jakarta.persistence.*;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 /**
  *

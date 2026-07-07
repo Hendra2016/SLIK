@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import com.bank.dto.AuthRequestDto;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.http.HttpMethod;
@@ -64,7 +65,10 @@ public class AuthController extends BaseController implements AuthenticationProv
 	}
 
 	public LoginData loadUserByUsername(String username, String password) {
-		RestResponse rest = callWsBank("login/" + username + "/" + password, null, HttpMethod.GET);
+		AuthRequestDto authRequestDto = new AuthRequestDto();
+		authRequestDto.setUsername(username);
+		authRequestDto.setPassword(password);
+		RestResponse rest = callWsBank("login", authRequestDto, HttpMethod.POST);
 		if (rest.getStatus() == CommonConstants.OK_REST_STATUS) {
 			try {
 				LoginData login = JsonUtil.mapJsonToSingleObject(rest.getContents(), LoginData.class);
