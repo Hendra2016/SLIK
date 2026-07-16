@@ -1,0 +1,5 @@
+/workspaces/SLIK/api-gateway/src/main/java/com/bank/gateway/ApiGatewayApplication.java
+/workspaces/SLIK/api-gateway/src/main/java/com/bank/gateway/api/GatewayFallbackController.java
+/workspaces/SLIK/api-gateway/src/main/java/com/bank/gateway/config/GatewayAuthProperties.java
+/workspaces/SLIK/api-gateway/src/main/java/com/bank/gateway/filter/JwtAuthenticationFilter.java
+/workspaces/SLIK/api-gateway/src/main/java/com/bank/gateway/filter/RequestIdFilter.java

@@ -1,0 +1,7 @@
+/workspaces/SLIK/identity-service/src/main/java/com/bank/identity/IdentityServiceApplication.java
+/workspaces/SLIK/identity-service/src/main/java/com/bank/identity/api/LegacyIdentityProxyController.java
+/workspaces/SLIK/identity-service/src/main/java/com/bank/identity/api/LegacyRestResponse.java
+/workspaces/SLIK/identity-service/src/main/java/com/bank/identity/config/HttpClientConfig.java
+/workspaces/SLIK/identity-service/src/main/java/com/bank/identity/config/SecurityConfig.java
+/workspaces/SLIK/identity-service/src/main/java/com/bank/identity/security/JwtAuthenticationFilter.java
+/workspaces/SLIK/identity-service/src/main/java/com/bank/identity/security/JwtTokenProvider.java

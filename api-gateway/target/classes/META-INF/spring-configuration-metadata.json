@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "gateway.auth",
+      "type": "com.bank.gateway.config.GatewayAuthProperties",
+      "sourceType": "com.bank.gateway.config.GatewayAuthProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "gateway.auth.identity-service-url",
+      "type": "java.lang.String",
+      "sourceType": "com.bank.gateway.config.GatewayAuthProperties"
+    },
+    {
+      "name": "gateway.auth.whitelist",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.bank.gateway.config.GatewayAuthProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: bank-view
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  web:
+    resources:
+      static-locations:
+        - classpath:/static/
+        - file:src/main/webapp/resources/
+  config:
+    import: application-integration.properties
+
+server:
+  error:
+    include-message: always
+    include-stacktrace: always
+    include-exception: true
+  port: ${SERVER_PORT:9001}
+  servlet:
+    context-path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+bank:
+  api:
+    core-url: ${WS_BANK_CORE_URL:http://localhost:8082/bank-core/}
+
+logging:
+  level:
+    org.apache.jasper: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web.servlet.view: TRACE
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
+    root: INFO
+    com.bank: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

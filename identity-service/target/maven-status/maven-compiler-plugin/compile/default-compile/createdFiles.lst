@@ -1,0 +1,7 @@
+com/bank/identity/config/HttpClientConfig.class
+com/bank/identity/config/SecurityConfig.class
+com/bank/identity/security/JwtAuthenticationFilter.class
+com/bank/identity/api/LegacyRestResponse.class
+com/bank/identity/api/LegacyIdentityProxyController.class
+com/bank/identity/security/JwtTokenProvider.class
+com/bank/identity/IdentityServiceApplication.class
