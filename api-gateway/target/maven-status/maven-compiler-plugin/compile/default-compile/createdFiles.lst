@@ -1,5 +1,0 @@
-com/bank/gateway/config/GatewayAuthProperties.class
-META-INF/spring-configuration-metadata.json
-com/bank/gateway/api/GatewayFallbackController.class
-com/bank/gateway/filter/RequestIdFilter.class
-com/bank/gateway/ApiGatewayApplication.class
