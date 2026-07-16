@@ -1,0 +1,31 @@
+# Maven
+target/
+
+# Java
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+.vscode/
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Maven local repo (if any)
+.m2/
+
+# Environment
+.env
+
+# Docker
+docker-data/
