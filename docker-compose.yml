@@ -1,0 +1,32 @@
+services:
+
+  bank-core:
+    build: ./bank-core
+    container_name: bank-core
+    ports:
+      - "8082:8082"
+
+  identity-service:
+    build: ./identity-service
+    container_name: identity-service
+    ports:
+      - "8086:8086"
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - bank-core
+      - identity-service
+
+  bank-view:
+    build: ./bank-view
+    container_name: bank-view
+    ports:
+      - "9001:9001"
+    environment:
+      WS_BANK_CORE_URL: http://bank-core:8082/bank-core/
+    depends_on:
+      - bank-core
